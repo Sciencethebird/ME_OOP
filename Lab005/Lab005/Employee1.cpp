@@ -15,47 +15,59 @@ using std::endl;
 // hireDate [Note: This invokes the so-called "default copy    
 // constructor" which the C++ compiler provides implicitly.]   
 Employee::Employee( const char *first, const char *last,
-   const Date &dateOfBirth, const Date &dateOfHire )
-   : birthDate( dateOfBirth ),  // initialize birthDate
-     hireDate( dateOfHire )     // initialize hireDateba
+   const Date &dateOfBirth)
+   : birthDate( dateOfBirth )// initialize birthDate
 {
    // copy first into firstName and be sure that it fits
    int length = (int)strlen( first );
    length = ( length < 25 ? length : 24 );
    strncpy( firstName, first, length );
    firstName[ length ] = '\0';
-
    // copy last into lastName and be sure that it fits
    length = (int)strlen( last );
    length = ( length < 25 ? length : 24 );
    strncpy( lastName, last, length );
    lastName[ length ] = '\0';
-
    // output Employee object to show when constructor is called
-   cout << "Employee object constructor: "
-        << firstName << ' ' << lastName << endl;
+
 
 } // end Employee constructor
 
 // print Employee object
 void Employee::print() const
 {
-   cout << lastName << ", " << firstName << "\nHired: ";
-   hireDate.print();
-   cout << "  Birth date: ";
-   birthDate.print();
-   cout << endl;
+    cout << lastName << ", " << firstName;
+    cout << std::endl <<"   Birth date: ";
+    birthDate.print();
+    
+    cout <<std::endl <<"   Country: " << Country<<'\n';
+    cout << "   City: " << City<<'\n';
+    cout << endl;
 
 } // end function print
 
+Employee& Employee::set_firstName(string n){
+    strcpy(firstName, n.c_str());
+    return *this;
+}
+Employee& Employee::set_lastName(string n){
+    strcpy(lastName, n.c_str());
+    return *this;
+}
 // output Employee object to show when its destructor is called
 Employee::~Employee()
-{ 
-   cout << "Employee object destructor: " 
-        << lastName << ", " << firstName << endl;
+{  
 
 } // end ~Employee destructor
 
+Employee& Employee::set_country(string c){
+    Country = c;
+    return *this;
+}
+Employee& Employee::set_city(string c){
+    City = c;
+    return *this;
+}
 /**************************************************************************
  * (C) Copyright 1992-2003 by Deitel & Associates, Inc. and Prentice      *
  * Hall. All Rights Reserved.                                             *

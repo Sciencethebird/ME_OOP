@@ -6,21 +6,31 @@
 
 // include Date class definition from date1.h
 #include "Date1.h"
+#include <string>
+using std::string;
 
 class Employee {
 
 public:
-   Employee( 
-      const char *, const char *, const Date &, const Date & );
-
-   void print() const;
-   ~Employee();  // provided to confirm destruction order
+    Employee(){}
+    Employee(const char *, const char *, const Date &);
+    Employee &set_country(string);
+    Employee &set_city(string);
+    Employee &set_firstName(string);
+    Employee &set_lastName(string);
+    void set_birthDate(int, int, int);
+    void print() const;
+    ~Employee();  // provided to confirm destruction order
 
 private:
-   char firstName[ 25 ];
-   char lastName[ 25 ];
-   const Date birthDate;  // composition: member object
-   const Date hireDate;   // composition: member object
+    char firstName[ 25 ];
+    char lastName[ 25 ];
+    
+    const Date birthDate;  // composition: member object
+    const Date hireDate;   // composition: member object
+    
+    string Country;
+    string City;
 
 }; // end class Employee
 

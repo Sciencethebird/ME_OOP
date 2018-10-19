@@ -9,24 +9,31 @@
 // Fig. 7.10: fig07_10.cpp
 // Demonstrating composition--an object with member objects.
 #include <iostream>
-
+#include <vector>
 using std::cout;
 using std::endl;
-
+using std::vector;
 #include "Employee1.h"  // Employee class definition
 
 int main()
 {
-    Date birth( 7, 24, 1949 );
-    Date hire( 3, 12, 1988 );
-    Employee manager( "Bob", "Jones", birth, hire );
-    
-    cout << '\n';
-    manager.print();
-    
-    cout << "\nTest Date constructor with invalid values:\n";
-    Date lastDayOff( 14, 35, 1994 );  // invalid month and day
-    cout << endl;
+    vector<Employee> list;
+    for(int i = 0; i< 10; i++){
+      
+        string first_n, last_n,country, city;
+        int y, m, d;
+        std::cin>> first_n >> last_n
+                >> y >> m >> d
+                >> country >> city;
+        
+        Date birth(m, d, y);
+        Employee temp(first_n.c_str(), last_n.c_str(), birth);
+        temp.set_country(country).set_city(city);
+        
+        list.push_back(temp);
+    }
+    for(int i = 0; i< 10; i++)
+        list[i].print();
     
     return 0;
     

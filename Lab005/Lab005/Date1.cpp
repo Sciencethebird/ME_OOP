@@ -24,25 +24,25 @@ Date::Date( int mn, int dy, int yr )
    day = checkDay( dy );      // validate the day
 
    // output Date object to show when its constructor is called
-   cout << "Date object constructor for date ";
-   print();                   
-   cout << endl;
+   //cout << "Date object constructor for date ";
+   //print();
+   //cout << endl;
 
 } // end Date constructor
 
 // print Date object in form month/day/year
 void Date::print() const
 {
-   cout << month << '/' << day << '/' << year; 
+    cout << month << '/' << day << '/' << year; 
 
 } // end function print
 
 // output Date object to show when its destructor is called
 Date::~Date()
 { 
-   cout << "Date object destructor for date ";
-   print();
-   cout << endl;
+   //cout << "Date object destructor for date ";
+   //print();
+   //cout << endl;
 
 } // end ~Date destructor
 
@@ -67,7 +67,20 @@ int Date::checkDay( int testDay ) const
 
    return 1;  // leave object in consistent state if bad value
 
-} // end function checkDay
+}
+Date* Date::set_day(int d){
+    day = (d>31)? d : 1;
+    return this;
+}
+Date* Date::set_month(int m){
+    month = (m>12)? m : 1;
+    return this;
+}
+Date* Date::set_year(int y){
+    year = y;
+    return this;
+}
+// end function checkDay
 
 /**************************************************************************
  * (C) Copyright 1992-2003 by Deitel & Associates, Inc. and Prentice      *
