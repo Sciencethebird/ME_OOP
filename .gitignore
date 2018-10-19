@@ -10,8 +10,7 @@
 *.xcbkptlist
 
 # Other files
-Lab003/Lab003_advanced/Lab003_advanced/0511105_Lab003.cpp.zip
-Lab005/Lab005/.vs/Lab005/v15/.suo
+.suo
 *.db
 *.ipch
 *.exe
@@ -24,8 +23,7 @@ Lab005/Lab005/.vs/Lab005/v15/.suo
 *.obj
 *.tlog
 *.log
-*.h
 *.user
 *.pch
-Lab005/Lab005_VS/.vs/Lab005_VS/v15/.suo
-Lab005/Lab005_VS/Lab005_VS/pch.cpp
+pch.cpp
+Lab003/Lab003_advanced/Lab003_advanced/0511105_Lab003.cpp.zip
