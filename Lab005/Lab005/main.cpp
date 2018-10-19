@@ -8,6 +8,7 @@
 
 // Fig. 7.10: fig07_10.cpp
 // Demonstrating composition--an object with member objects.
+
 #include <iostream>
 #include <vector>
 using std::cout;
@@ -17,6 +18,7 @@ using std::vector;
 
 int main()
 {
+    cout << "Please copy Data at bottom of the main.cpp for testing, thanks, kindly" << std::endl;
     vector<Employee> list;
     for(int i = 0; i< 10; i++){
       
@@ -37,20 +39,23 @@ int main()
     
     return 0;
     
-} // end main
+}// end main
 
-/**************************************************************************
- * (C) Copyright 1992-2003 by Deitel & Associates, Inc. and Prentice      *
- * Hall. All Rights Reserved.                                             *
- *                                                                        *
- * DISCLAIMER: The authors and publisher of this book have used their     *
- * best efforts in preparing the book. These efforts include the          *
- * development, research, and testing of the theories and programs        *
- * to determine their effectiveness. The authors and publisher make       *
- * no warranty of any kind, expressed or implied, with regard to these    *
- * programs or to the documentation contained in these books. The authors *
- * and publisher shall not be liable in any event for incidental or       *
- * consequential damages in connection with, or arising out of, the       *
- * furnishing, performance, or use of these programs.                     *
- *************************************************************************/
+/* copy / modify the test data below
+ 
+ format: First name, Last name, Y, M, D, City, Country
+ 
+Johney Walker 2005 4 12 Kabul Afghanistan
+asda asd 1997 9 23 Ottawa Canada
+asd asdqw 2006 3 15 Taipei Taiwan
+awe qw 1983 4 4 Tokyo Japan
+riter wrt 1993 1 1 London France
+apple seed 2080 8 12 Havana Cuba
+yahoo google 3096 4 4 Cairo Egypt
+htc vibe 1895 7 7 Pretoria South_Africa
+lol lmao 2080 9 9 Madrid Spain
+haha qq 2023 4 31 Budapest Hungary
+ 
+*/
+
 
