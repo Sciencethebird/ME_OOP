@@ -1,10 +1,13 @@
 
-*.pbxproj
-*.xcworkspacedata
-*.xcbkptlist
-*.xcuserstate
-*.plist
-Lab002/.DS_Store
-Lab002/Lab002/.DS_Store
-.DS_Store
-Lab003/Lab003_advanced/Lab003_advanced/0511105_Lab003.cpp.zip
+# Operating System files
+ .DS_Store
+ 
+# Xcode files
+ *.xcuserstate
+ *.xcworkspace
+ *.pbxproj
+ *.plist
+ *.xcbkptlist
+
+# Other files
+ Lab003/Lab003_advanced/Lab003_advanced/0511105_Lab003.cpp.zip
