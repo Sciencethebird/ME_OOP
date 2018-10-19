@@ -25,7 +25,7 @@ int main()
         std::cin>> first_n >> last_n
                 >> y >> m >> d
                 >> country >> city;
-        
+        //yay
         Date birth(m, d, y);
         Employee temp(first_n.c_str(), last_n.c_str(), birth);
         temp.set_country(country).set_city(city);
