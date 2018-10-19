@@ -1,5 +1,6 @@
 // Fig. 7.9: Character1.cpp
 // Member-function definitions for class Character.
+#include "pch.h"
 #include <iostream>
 
 using std::cout;
