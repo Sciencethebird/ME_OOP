@@ -14,12 +14,12 @@
 using std::cout;
 using std::endl;
 using std::vector;
-#include "Employee1.h"  // Employee class definition
+#include "Character.h"  // Character class definition
 
 int main()
 {
-    cout << "Please copy Data at bottom of the main.cpp for testing, thanks, kindly" << std::endl;
-    vector<Employee> list;
+    cout << "Testing data avalible at the bottom of main.cpp" << std::endl;
+    vector<Character> list;
     for(int i = 0; i< 10; i++){
       
         string first_n, last_n,country, city;
@@ -29,7 +29,7 @@ int main()
                 >> country >> city;
         //yay
         Date birth(m, d, y);
-        Employee temp(first_n.c_str(), last_n.c_str(), birth);
+        Character temp(first_n.c_str(), last_n.c_str(), birth);
         temp.set_country(country).set_city(city);
         
         list.push_back(temp);
@@ -46,15 +46,15 @@ int main()
  format: First name, Last name, Y, M, D, City, Country
  
 Johney Walker 2005 4 12 Kabul Afghanistan
-asda asd 1997 9 23 Ottawa Canada
-asd asdqw 2006 3 15 Taipei Taiwan
-awe qw 1983 4 4 Tokyo Japan
-riter wrt 1993 1 1 London France
-apple seed 2080 8 12 Havana Cuba
-yahoo google 3096 4 4 Cairo Egypt
-htc vibe 1895 7 7 Pretoria South_Africa
-lol lmao 2080 9 9 Madrid Spain
-haha qq 2023 4 31 Budapest Hungary
+Jimmy Li 1997 9 23 Ottawa Canada
+Steve Jobs 2006 3 15 Taipei Taiwan
+Amy Wong 1983 4 4 Tokyo Japan
+Stevin Morrison 1993 1 1 London France
+Ching Chang 2080 8 12 Havana Cuba
+Justin Beiber 3096 4 4 Cairo Egypt
+Joah Schenider 1895 7 7 Pretoria South_Africa
+Mike Houng 2080 9 9 Madrid Spain
+Jacky Cho 2023 4 31 Budapest Hungary
  
 */
 

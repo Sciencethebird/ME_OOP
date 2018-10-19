@@ -1,20 +1,19 @@
-// Fig. 7.9: employee1.cpp
-// Member-function definitions for class Employee.
+// Fig. 7.9: Character1.cpp
+// Member-function definitions for class Character.
 #include <iostream>
 
 using std::cout;
 using std::endl;
-
 #include <cstring>      // strcpy and strlen prototypes
 
-#include "Employee1.h"  // Employee class definition
+#include "Character.h"  //  class definition
 #include "Date1.h"      // Date class definition
 
 // constructor uses member initializer list to pass initializer
 // values to constructors of member objects birthDate and      
 // hireDate [Note: This invokes the so-called "default copy    
 // constructor" which the C++ compiler provides implicitly.]   
-Employee::Employee( const char *first, const char *last,
+Character::Character( const char *first, const char *last,
    const Date &dateOfBirth)
    : birthDate( dateOfBirth )// initialize birthDate
 {
@@ -28,13 +27,13 @@ Employee::Employee( const char *first, const char *last,
    length = ( length < 25 ? length : 24 );
    strncpy( lastName, last, length );
    lastName[ length ] = '\0';
-   // output Employee object to show when constructor is called
+   // output Character object to show when constructor is called
 
 
-} // end Employee constructor
+} // end Character constructor
 
-// print Employee object
-void Employee::print() const
+// print Character object
+void Character::print() const
 {
     cout << lastName << ", " << firstName;
     cout << std::endl <<"   Birth date: ";
@@ -46,25 +45,25 @@ void Employee::print() const
 
 } // end function print
 
-Employee& Employee::set_firstName(string n){
+Character& Character::set_firstName(string n){
     strcpy(firstName, n.c_str());
     return *this;
 }
-Employee& Employee::set_lastName(string n){
+Character& Character::set_lastName(string n){
     strcpy(lastName, n.c_str());
     return *this;
 }
-// output Employee object to show when its destructor is called
-Employee::~Employee()
+// output Character object to show when its destructor is called
+Character::~Character()
 {  
 
-} // end ~Employee destructor
+} // end ~Character destructor
 
-Employee& Employee::set_country(string c){
+Character& Character::set_country(string c){
     Country = c;
     return *this;
 }
-Employee& Employee::set_city(string c){
+Character& Character::set_city(string c){
     City = c;
     return *this;
 }

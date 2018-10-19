@@ -1,6 +1,6 @@
-// Fig. 7.8: employee1.h
-// Employee class definition.
-// Member functions defined in employee1.cpp.
+// Fig. 7.8: Character1.h
+// Character class definition.
+// Member functions defined in Character1.cpp.
 #ifndef EMPLY1_H
 #define EMPLY1_H
 
@@ -9,18 +9,18 @@
 #include <string>
 using std::string;
 
-class Employee {
+class Character {
 
 public:
-    Employee(){}
-    Employee(const char *, const char *, const Date &);
-    Employee &set_country(string);
-    Employee &set_city(string);
-    Employee &set_firstName(string);
-    Employee &set_lastName(string);
+    Character(){}
+    Character(const char *, const char *, const Date &);
+    Character &set_country(string);
+    Character &set_city(string);
+    Character &set_firstName(string);
+    Character &set_lastName(string);
     void set_birthDate(int, int, int);
     void print() const;
-    ~Employee();  // provided to confirm destruction order
+    ~Character();  // provided to confirm destruction order
 
 private:
     char firstName[ 25 ];
@@ -32,7 +32,7 @@ private:
     string Country;
     string City;
 
-}; // end class Employee
+}; // end class Character
 
 #endif
 
