@@ -10,4 +10,20 @@
 *.xcbkptlist
 
 # Other files
+.suo
+*.db
+*.ipch
+*.exe
+*.sln
+*.ilk
+*.pdb
+*.filters
+*.vcxproj
+*.idb
+*.obj
+*.tlog
+*.log
+*.user
+*.pch
+pch.cpp
 Lab003/Lab003_advanced/Lab003_advanced/0511105_Lab003.cpp.zip
