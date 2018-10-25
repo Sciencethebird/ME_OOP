@@ -7,9 +7,9 @@
 class Date {
 
 public:
-   Date( int = 1, int = 1, int = 1900 ); // default constructor
-   void print() const;  // print date in month/day/year format
-   ~Date();  // provided to confirm destruction order
+    Date( int = 1, int = 1, int = 1900 ); // default constructor
+    void print() const;  // print date in month/day/year format
+    ~Date();  // provided to confirm destruction order
     Date* set_day(int);
     Date* set_month(int);
     Date* set_year(int);

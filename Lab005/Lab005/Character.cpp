@@ -30,7 +30,6 @@ Character::Character( const char *first, const char *last,
    lastName[ length ] = '\0';
    // output Character object to show when constructor is called
 
-
 } // end Character constructor
 
 // print Character object
